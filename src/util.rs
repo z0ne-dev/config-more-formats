@@ -1,6 +1,7 @@
 use config::{Map, Value, ValueKind};
 use std::error::Error;
 use std::fmt;
+use std::fmt::Debug;
 
 #[derive(serde::Deserialize, Debug)]
 #[serde(untagged)]
@@ -16,9 +17,7 @@ pub enum Val {
 
 // Copied over and adjusted from config crate
 #[allow(dead_code)]
-pub fn extract_root_table(
-    value: Value,
-) -> Result<Map<String, Value>, Box<dyn Error + Send + Sync>> {
+pub fn extract_root_table(value: Value) -> Result<Map<String, Value>, Box<dyn Error + Send + Sync>> {
     match value.kind {
         ValueKind::Table(map) => Ok(map),
         ValueKind::Nil => Err(Unexpected::Unit),
@@ -31,7 +30,7 @@ pub fn extract_root_table(
         ValueKind::Float(value) => Err(Unexpected::Float(value)),
         ValueKind::String(value) => Err(Unexpected::Str(value)),
     }
-        .map_err(|err| Box::new(err) as Box<dyn Error + Send + Sync>)
+    .map_err(|err| Box::new(err) as Box<dyn Error + Send + Sync>)
 }
 
 #[derive(Debug)]
@@ -75,19 +74,13 @@ pub fn from_value(uri: Option<&String>, value: Val) -> Value {
         Val::Float(v) => ValueKind::Float(v),
         Val::Boolean(v) => ValueKind::Boolean(v),
         Val::Object(table) => {
-            let m = table
-                .into_iter()
-                .map(|(k, v)| (k, from_value(uri, v)))
-                .collect();
+            let m = table.into_iter().map(|(k, v)| (k, from_value(uri, v))).collect();
 
             ValueKind::Table(m)
         }
 
         Val::Array(array) => {
-            let l = array
-                .into_iter()
-                .map(|v| from_value(uri, v))
-                .collect();
+            let l = array.into_iter().map(|v| from_value(uri, v)).collect();
 
             ValueKind::Array(l)
         }

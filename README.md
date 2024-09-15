@@ -42,12 +42,12 @@ This crate uses `serde_yaml_ng` which is another actively maintained solution fo
 ```rust
 use config::Config;use config_more_formats::by_file_extension;
 
-fn main() {
+
     let settings = Config::builder()
         .add_source(by_file_extension("settings.toml").unwrap())
         .build()
         .unwrap();
-}
+
 ```
 
 ## License
