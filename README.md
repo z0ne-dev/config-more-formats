@@ -1,7 +1,7 @@
 [![Crates.io](https://img.shields.io/crates/v/config-more-formats.svg)](https://crates.io/crates/config-more-formats)
-[![Workflow Status](https://github.com/z0ne-dev/xconfig/workflows/main/badge.svg)](https://github.com/z0ne-dev/xconfig/actions?query=workflow%3A%22main%22)
-[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/z0ne-dev/xconfig.svg)](https://isitmaintained.com/project/z0ne-dev/xconfig "Average time to resolve an issue")
-[![Percentage of issues still open](https://isitmaintained.com/badge/open/z0ne-dev/xconfig.svg)](https://isitmaintained.com/project/z0ne-dev/xconfig "Percentage of issues still open")
+[![Workflow Status](https://github.com/z0ne-dev/config-more-formats/workflows/main/badge.svg)](https://github.com/z0ne-dev/config-more-formats/actions?query=workflow%3A%22main%22)
+[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/z0ne-dev/config-more-formats.svg)](https://isitmaintained.com/project/z0ne-dev/config-more-formats "Average time to resolve an issue")
+[![Percentage of issues still open](https://isitmaintained.com/badge/open/z0ne-dev/config-more-formats.svg)](https://isitmaintained.com/project/z0ne-dev/config-more-formats "Percentage of issues still open")
 ![Maintenance](https://img.shields.io/badge/maintenance-passively--maintained-yellowgreen.svg)
 
 # config-more-formats

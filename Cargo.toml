@@ -5,9 +5,9 @@ edition = "2021"
 authors = [
     "Christopher König <me@kurabloodlust.eu>"
 ]
-documentation = "https://docs.rs/xconfig"
+documentation = "https://docs.rs/config-more-formats"
 description = "Additional formats for the config library."
-repository = "https://github.com/z0ne-dev/xconfig"
+repository = "https://github.com/z0ne-dev/config-more-formats"
 readme = "README.md"
 keywords = ["config", "configuration", "config", "serde"]
 license = "MIT"
@@ -20,10 +20,10 @@ unexpected_cfgs = { level = "warn", check-cfg = ['cfg(nightly)'] }
 all-features = true
 
 [badges]
-github = { repository = "z0ne-dev/xconfig" }
+github = { repository = "z0ne-dev/config-more-formats" }
 maintenance = { status = "passively-maintained" }
-is-it-maintained-open-issues = { repository = "z0ne-dev/xconfig" }
-is-it-maintained-issue-resolution = { repository = "z0ne-dev/xconfig" }
+is-it-maintained-open-issues = { repository = "z0ne-dev/config-more-formats" }
+is-it-maintained-issue-resolution = { repository = "z0ne-dev/config-more-formats" }
 
 [dependencies]
 ason = { version = "1.0.1", optional = true }
