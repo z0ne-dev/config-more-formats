@@ -22,16 +22,20 @@ Supported formats added by this crate:
 | HJSON           | `hjson`      | [serde-hjson](https://crates.io/crates/serde_hjson)                     | [Human JSON](https://hjson.github.io/)                                           |
 | HCL             | `hcl`        | [hcl-rs](https://crates.io/crates/hcl)                                  | HashiCorp Configuration Language                                                 |
 | Ason            | `ason`       | [ason](https://crates.io/crates/ason)                                   | Ason format                                                                      |
-| JSON            | `json`       | [serde_json](https://crates.io/crates/serde_json)                       | config supplied JSON format                                                     |
-| JSON5           | `json5`      | [serde-json5](https://crates.io/crates/serde_json5)                     | config supplied JSON5 format                                                    |
-| RON             | `ron`        | [ron](https://crates.io/crates/ron)                                     | config supplied RON format                                                      |
-| TOML            | `toml`       | [toml](https://crates.io/crates/toml)                                   | config supplied TOML format                                                     |
-| YAML            | `yaml`       | [serde_yaml](https://crates.io/crates/serde_yaml)                       | config supplied YAML format (using deprecated `serde_yaml`)                     |
-| INI             | `ini`        | [ini](https://crates.io/crates/ini)                                     | config supplied INI format                                                      |
+| JSON            | `json`       | [serde_json](https://crates.io/crates/serde_json)                       | config supplied JSON format                                                      |
+| JSON5           | `json5`      | [serde-json5](https://crates.io/crates/serde_json5)                     | config supplied JSON5 format                                                     |
+| RON             | `ron`        | [ron](https://crates.io/crates/ron)                                     | config supplied RON format                                                       |
+| TOML            | `toml`       | [toml](https://crates.io/crates/toml)                                   | config supplied TOML format                                                      |
+| YAML            | `yaml`       | [yaml-rust](https://crates.io/crates/yaml-rust)                         | config supplied YAML format (using deprecated `serde_yaml`)                      |
+| INI             | `ini`        | [ini](https://crates.io/crates/ini)                                     | config supplied INI format                                                       |
 |                 | `all`        |                                                                         | Enable all formats except for `yaml`                                             |
 
 If you do not enable yaml, yaml_ng will be used for yaml files instead.
 Instead of `all`, enable only the formats you need to reduce compile times and dependencies.
+
+The current development version of config already uses [`yaml-rust2`](https://crates.io/crates/yaml-rust2)
+which is a fork of `yaml-rust` and is actively maintained.
+This crate uses `serde_yaml_ng` which is another actively maintained solution for YAML.
 
 ## Example of [`by_file_extension`]
 
