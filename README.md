@@ -38,10 +38,12 @@ Instead of `all`, enable only the formats you need to reduce compile times and d
 ```rust
 use config::Config;use config_more_formats::by_file_extension;
 
-let settings = Config::builder()
-    .add_source(by_file_extension("settings.toml").unwrap())
-    .build()
-    .unwrap();
+fn main() {
+    let settings = Config::builder()
+        .add_source(by_file_extension("settings.toml").unwrap())
+        .build()
+        .unwrap();
+}
 ```
 
 ## License

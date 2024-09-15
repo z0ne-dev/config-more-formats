@@ -31,10 +31,12 @@ Instead of `all`, enable only the formats you need to reduce compile times and d
 ```rust
 use config::Config;use config_more_formats::by_file_extension;
 
-let settings = Config::builder()
-    .add_source(by_file_extension("settings.toml").unwrap())
-    .build()
-    .unwrap();
+fn main() {
+    let settings = Config::builder()
+        .add_source(by_file_extension("settings.toml").unwrap())
+        .build()
+        .unwrap();
+}
 ```
 */
 
@@ -60,7 +62,6 @@ pub use ason::Ason;
 mod yaml_ng;
 #[cfg(feature = "yaml_ng")]
 pub use yaml_ng::YamlNg;
-
 
 use config::{FileSourceFile, FileStoredFormat};
 use std::fmt::Display;
