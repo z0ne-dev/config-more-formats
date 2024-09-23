@@ -1,6 +1,6 @@
 [package]
 name = "config-more-formats"
-version = "1.1.0"
+version = "1.1.1"
 edition = "2021"
 authors = [
     "Christopher König <me@kurabloodlust.eu>"

@@ -97,6 +97,8 @@ impl Display for FormatError {
     }
 }
 
+impl Error for FormatError {}
+
 /// Parse a file by its extension.
 ///
 /// This function will attempt to parse a file by its extension. If the extension is not supported,
